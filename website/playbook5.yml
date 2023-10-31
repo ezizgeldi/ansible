@@ -1,0 +1,17 @@
+---
+- name: Website
+  hosts: all
+  become: yes
+
+
+  tasks:
+
+  - name: ping
+    ping:
+
+  - name: debug
+    debug: msg={{ item }}
+    loop:
+       - "1"
+       - "2"
+       -  fuck
